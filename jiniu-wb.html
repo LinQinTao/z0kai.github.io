@@ -25,12 +25,21 @@
   </head>
   <body>
     <h1>Hello Static World</h1>
-    <button id="logo">点我<button>
+    <button id="news">资讯</button>
+    <button id="baidu">百度</button>
     <script>
-      var goToRnId = document.getElementById('logo');
+      var goToRnId = document.getElementById('news');
       goToRnId.addEventListener('click', function (event) {
         event.preventDefault();
         goNative({ routerName: 'NewsDetail' });
+      });
+      goToRnId = document.getElementById('baidu');
+      goToRnId.addEventListener('click', function (event) {
+        event.preventDefault();
+        goNative({
+          routerName: 'StockDetail',
+          params: {stockItem: { title: '上证指数', prod_code: '000001' }},
+        });
       })
     </script>
   </body>
