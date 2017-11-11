@@ -1,0 +1,33 @@
+<!DOCTYPE html>\n
+<html>
+  <head>
+    <title>Hello Static World</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=320, user-scalable=no">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        font: 62.5% arial, sans-serif;
+        background: #ccc;
+      }
+      h1 {
+        padding: 45px;
+        margin: 0;
+        text-align: center;
+        color: #33f;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Static World</h1>
+    <buttom id="logo">点我<buttom>
+    <script>
+      var goToRnId = document.getElementById('logo');
+      goToRnId.addEventListener('click', function (event) {
+        event.preventDefault();
+        init({ url: 'NewsDetail' });
+      })
+    </script>
+  </body>
+</html>
